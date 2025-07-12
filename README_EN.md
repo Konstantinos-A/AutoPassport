@@ -11,7 +11,7 @@ AutoPassport is a decentralized application (DApp) for digital vehicle history m
 - [Frontend (React UI)](#-frontend-react-ui)
 - [Technologies](#-technologies)
 - [Usage Instructions](#-usage-instructions)
-- [Authors](#-authors)
+
 
 ---
 
