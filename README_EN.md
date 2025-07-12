@@ -1,10 +1,10 @@
-# 🚗 AutoPassport Blockchain App
+# AutoPassport Blockchain App
 
 AutoPassport is a decentralized application (DApp) for digital vehicle history management. It is implemented using Ethereum smart contracts and decentralized storage via IPFS.
 
 ---
 
-## 📦 Contents
+## Contents
 
 - [Project Description](#-project-description)
 - [Smart Contracts](#-smart-contracts)
@@ -15,7 +15,7 @@ AutoPassport is a decentralized application (DApp) for digital vehicle history m
 
 ---
 
-## 🧾 Project Description
+## Project Description
 
 The system supports:
 
@@ -27,7 +27,7 @@ The system supports:
 
 ---
 
-## 🔐 Smart Contracts
+## Smart Contracts
 
 ### `AutoPassport.sol`
 
@@ -72,37 +72,37 @@ Handles user roles. Supports:
 
 Main Components:
 
-### 📋 `Dashboard.jsx`
+### `Dashboard.jsx`
 
 - Connected wallet display
 - Registered vehicle log (`VehicleRegistered` events)
 - Document viewer per VIN (`VehicleDocumentsPanel`)
 - Navigation to all sub-features
 
-### 📤 `UploadForm.jsx`
+### `UploadForm.jsx`
 
 - Form for uploading documents
 - Uploads 2 files to IPFS via Pinata
 - Computes `combinedHash` and stores via smart contract
 
-### 🔁 `TransferForm.jsx`
+### `TransferForm.jsx`
 
 - Transfers vehicle ownership using `transferOwnership(...)`
 
-### 🗃️ `VehicleHistory.jsx`
+### `VehicleHistory.jsx`
 
 - Retrieves vehicle document history by VIN
 - Displays active/inactive document status
 - Allows deactivation (by Ministry or registrar only)
 
-### 🛡️ `AccessManagement.jsx` & `RoleManager.jsx`
+### `AccessManagement.jsx` & `RoleManager.jsx`
 
 - Role assignment UI
 - RBAC control with smart contract integration
 
 ---
 
-## 🧪 Technologies
+## Technologies
 
 - Solidity (Smart Contracts)
 - Hardhat
@@ -114,7 +114,7 @@ Main Components:
 
 ---
 
-## ▶️ Usage Instructions
+## Usage Instructions
 
 ```bash
 # 1. Install dependencies
@@ -126,6 +126,16 @@ npm run dev
 # 3. (Optional) Deploy smart contracts
 npx hardhat compile
 npx hardhat run scripts/deploy.js --network sepolia
+--------------------------------------------------------------
+--------------------------------------------------------------
+##CAREFULL
+-------- YOU NEED TO HAVE an .env file under the **AutoPassport/** Directory -----
+This file must contain the following entries:
+REACT_APP_PINATA_API_KEY=<PINATA API KEY
+REACT_APP_PINATA_SECRET_API_KEY=<SECRET API KEY>
+REACT_APP_PASSPORT_CONTRACT_ADDRESS=<AUTOPASSPORT SMART CONTRACT ADDRESS>
+REACT_APP_RBAC_CONTRACT_ADDRESS=<RBAC CONTRACT ADDRESS>
+
 ```
 
 ---
